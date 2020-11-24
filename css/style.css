@@ -59,3 +59,8 @@ header img{
 .disc-list li .genre{
     font-size: 11px;
 }
+
+/* LOADER */
+.loader{
+    padding: 20px;
+}
