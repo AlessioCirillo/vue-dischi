@@ -64,3 +64,14 @@ header img{
 .loader{
     padding: 20px;
 }
+
+/* FILTER */
+.filter{
+    margin: 50px;
+    text-align: center;
+}
+
+.filter select{
+    margin-left: 10px;
+    border-radius: 5px;
+}

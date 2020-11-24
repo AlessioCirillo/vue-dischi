@@ -25,6 +25,21 @@
         </header>
 
         <main>
+            <!-- FILTER -->
+            <div class="filter">
+                Filter by gender:
+                <select v-model="activeGender"
+                        @change="filterGen"
+                >
+                    <option value="all">All</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="rock">Rock</option>
+                    <option value="metal">Metal</option>
+                    <option value="pop">Pop</option>
+                </select>
+            </div>
+
+            <!-- DISCS LIST -->
             <ul v-if="discs.length > 0" class="discs-list">
                 <li v-for="disc in discs">
                     <div class="img-cont">
@@ -44,6 +59,8 @@
                     </h4>
                 </li>
             </ul>
+
+            <!-- LOADER -->
             <h2 v-else class="loader">
                 Loading discs, please wait...
             </h2>

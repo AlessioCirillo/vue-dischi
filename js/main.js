@@ -2,7 +2,8 @@
 const app = new Vue({
     el: '#app',
     data:{
-        discs:[]
+        discs:[],
+        activeGender: 'all'
     },
 
     created(){
@@ -20,6 +21,22 @@ const app = new Vue({
     },
 
     methods:{
+        filterGen(){
+            axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+            .then(result => {
+                let newDiscsList = result.data.response;
+
+                if(this.activeGender !== 'all'){
+                    newDiscsList = newDiscsList.filter( cd => cd.genre.toLowerCase() === this.activeGender);
+                }
+
+                this.discs = newDiscsList;  
+
+            })
+            .catch(error => {
+                console.log(error);
+            })
+        }
 
     }
 });
