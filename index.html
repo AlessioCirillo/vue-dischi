@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Vue dischi</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <header>
+            <img src="./img/logo.png" alt="">
+        </header>
+
+        <main>
+            <ul class="discs-list">
+                <li v-for="disc in discs">
+                    <div class="img-cont">
+                        <img :src="disc.poster" :alt="disc.title">
+                    </div>
+                    <h3 class="title">
+                        {{ disc.title }}
+                    </h3>
+                    <h4 class="author">
+                        {{ disc.author }}
+                    </h4>
+                    <h4 class="year">
+                        {{ disc.year }}
+                    </h4>
+                    <h4 class="genre">
+                        {{ disc.genre }}
+                    </h4>
+                </li>
+            </ul>
+        </main>
+
+    </div>
+    
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

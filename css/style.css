@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #192d3b;
+    color: #fff;
+    font-size: 13px;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    padding: 8px 8px 3px 8px;
+    background: #2a3a46;
+}
+
+header img{
+    height: 45px;
+}
+
+.discs-list{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.discs-list li{
+    list-style: none;
+    text-align: center;
+    flex-basis: 150px;
+    padding: 15px;
+    margin: 10px 15px;
+    background: #2a3a46;
+}
+
+.img-cont img{
+    height: 126px;
+}
+
+.discs-list li .title{
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.discs-list li .year,
+.discs-list li .author{
+    color: #7f7f7f;
+    margin: 10px 0;
+}
+
+.discs-list li .year,
+.disc-list li .genre{
+    font-size: 11px;
+}
